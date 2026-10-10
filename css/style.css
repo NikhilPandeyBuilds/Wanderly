@@ -1,0 +1,241 @@
+:root {
+  --primary: #1F4D45;
+  --dark: #162A27;
+  --accent: #D89B5B;
+  --background: #F8F7F2;
+  --text: #263330;
+  --white: #FFFFFF;
+  --muted: #6A7872;
+  --line: #DDE4DE;
+  --shadow: 0 18px 45px rgba(22, 42, 39, 0.10);
+  --radius: 18px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  line-height: 1.6;
+}
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+button, input, select, textarea { font: inherit; }
+button, .button { cursor: pointer; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+.site-header {
+  position: relative;
+  z-index: 10;
+  background: var(--white);
+  border-bottom: 1px solid rgba(31, 77, 69, 0.10);
+}
+.navbar {
+  max-width: 1180px;
+  min-height: 76px;
+  padding: 0 24px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.brand {
+  color: var(--primary);
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: .16em;
+}
+.nav-links { display: flex; align-items: center; gap: 8px; list-style: none; padding: 0; margin: 0; }
+.nav-links a { display: block; padding: 10px 13px; color: #53625d; font-size: .88rem; border-radius: 999px; transition: background .2s, color .2s; }
+.nav-links a:hover, .nav-links a.active { color: var(--primary); background: #edf3ee; }
+
+.container { width: min(1180px, calc(100% - 48px)); margin: auto; }
+.section { padding: 86px 0; }
+.section-heading { max-width: 660px; margin-bottom: 34px; }
+.eyebrow { color: var(--accent); font-size: .76rem; font-weight: bold; letter-spacing: .18em; text-transform: uppercase; }
+h1, h2, h3, p { margin-top: 0; }
+h1, h2, h3 { color: var(--dark); font-family: Georgia, "Times New Roman", serif; line-height: 1.12; }
+h1 { font-size: clamp(2.6rem, 6vw, 5.5rem); margin-bottom: 20px; }
+h2 { font-size: clamp(2rem, 4vw, 3.3rem); margin-bottom: 12px; }
+h3 { font-size: 1.45rem; margin-bottom: 10px; }
+.lead { color: #52615b; font-size: 1.08rem; }
+.muted { color: var(--muted); }
+.button { display: inline-block; border: 1px solid transparent; border-radius: 999px; padding: 13px 22px; background: var(--accent); color: var(--dark); font-weight: bold; transition: transform .2s, box-shadow .2s, background .2s; }
+.button:hover { transform: translateY(-2px); box-shadow: 0 9px 20px rgba(216, 155, 91, .28); background: #e7ab6a; }
+.button.secondary { color: var(--primary); background: transparent; border-color: rgba(31, 77, 69, .28); }
+.button.secondary:hover { background: #edf3ee; box-shadow: none; }
+
+.hero {
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  color: var(--white);
+  background: linear-gradient(90deg, rgba(12, 35, 31, .84), rgba(12, 35, 31, .28)), url("../images/hero.svg") center/cover;
+}
+.hero h1, .hero h2 { color: var(--white); max-width: 720px; }
+.hero p { max-width: 570px; color: rgba(255,255,255,.84); font-size: 1.15rem; }
+.hero .eyebrow { color: #f0c18f; }
+.hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.hero-actions .secondary { color: var(--white); border-color: rgba(255,255,255,.45); }
+
+.quick-explore { position: relative; margin-top: -48px; z-index: 2; }
+.explore-form { display: grid; grid-template-columns: 1.4fr 1fr auto; gap: 12px; padding: 14px; background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); }
+.field, .explore-form label { display: block; }
+.field span, .explore-form label span { display: block; margin-bottom: 6px; color: var(--muted); font-size: .78rem; font-weight: bold; }
+input, select, textarea { width: 100%; min-height: 48px; padding: 11px 13px; color: var(--text); background: var(--white); border: 1px solid #ccd8d0; border-radius: 10px; }
+textarea { min-height: 132px; resize: vertical; }
+input:hover, select:hover, textarea:hover { border-color: var(--primary); }
+.explore-form .button { align-self: end; min-height: 48px; }
+
+.card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.destination-card, .package-card, .feature-card, .testimonial-card, .contact-card { background: var(--white); border: 1px solid rgba(31,77,69,.08); border-radius: var(--radius); box-shadow: 0 8px 24px rgba(22,42,39,.05); overflow: hidden; transition: transform .25s, box-shadow .25s; }
+.destination-card:hover, .package-card:hover { transform: translateY(-7px); box-shadow: var(--shadow); }
+.card-image { width: 100%; aspect-ratio: 1.4 / 1; object-fit: cover; transition: transform .35s; }
+.destination-card:hover .card-image { transform: scale(1.04); }
+.card-body { padding: 21px; }
+.card-body h3 { margin-bottom: 5px; }
+.card-body p { color: var(--muted); font-size: .93rem; }
+.card-meta { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 18px; }
+.category { color: var(--primary); font-size: .76rem; font-weight: bold; letter-spacing: .08em; text-transform: uppercase; }
+.text-link { color: var(--primary); font-weight: bold; font-size: .9rem; }
+.text-link:hover { color: var(--accent); }
+
+.feature-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.feature-card { padding: 26px 22px; }
+.feature-icon { width: 42px; height: 42px; display: grid; place-items: center; margin-bottom: 20px; border-radius: 50%; background: #edf3ee; font-size: 1.2rem; }
+.feature-card p { color: var(--muted); font-size: .9rem; }
+
+.experience-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; grid-template-rows: 230px 230px; gap: 16px; }
+.experience-card { position: relative; min-height: 180px; display: flex; align-items: end; padding: 24px; color: var(--white); overflow: hidden; border-radius: var(--radius); background: center/cover; }
+.experience-card::before { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(12,35,31,.82), rgba(12,35,31,0)); }
+.experience-card > div { position: relative; z-index: 1; }
+.experience-card h3 { color: var(--white); margin-bottom: 4px; }
+.experience-card p { margin-bottom: 0; color: rgba(255,255,255,.8); font-size: .9rem; }
+.experience-card:first-child { grid-row: span 2; background-image: url("../images/ladakh.svg"); }
+.experience-card:nth-child(2) { background-image: url("../images/goa.svg"); }
+.experience-card:nth-child(3) { background-image: url("../images/rajasthan.svg"); }
+.experience-card:nth-child(4) { background-image: url("../images/kerala.svg"); }
+
+.gallery-grid { display: grid; grid-template-columns: 1.2fr .8fr .8fr; grid-auto-rows: 180px; gap: 14px; }
+.gallery-item { overflow: hidden; border-radius: 14px; background: var(--primary); }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
+.gallery-item:hover img { transform: scale(1.05); }
+.gallery-item.tall { grid-row: span 2; }
+.gallery-item.wide { grid-column: span 2; }
+
+.testimonial-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.testimonial-card { padding: 28px; }
+.quote { color: var(--dark); font: 1.15rem/1.45 Georgia, serif; }
+.quote-author { margin: 20px 0 0; color: var(--primary); font-size: .85rem; font-weight: bold; }
+.newsletter { padding: 58px; color: var(--white); background: var(--primary); border-radius: var(--radius); }
+.newsletter h2 { color: var(--white); }
+.newsletter p { color: rgba(255,255,255,.76); }
+.newsletter-form { display: flex; max-width: 560px; gap: 10px; }
+.newsletter-form input { flex: 1; }
+
+.page-banner { padding: 86px 0 75px; background: linear-gradient(135deg, #e7efe7, #f8f7f2); border-bottom: 1px solid var(--line); }
+.page-banner h1 { max-width: 780px; font-size: clamp(2.8rem, 6vw, 5rem); }
+.page-banner p { max-width: 620px; color: var(--muted); font-size: 1.1rem; }
+.destinations-grid { grid-template-columns: repeat(4, 1fr); }
+
+.package-card { padding: 25px; }
+.package-top { display: flex; align-items: start; justify-content: space-between; gap: 12px; }
+.price { color: var(--primary); font: bold 1.35rem Georgia, serif; white-space: nowrap; }
+.duration { color: var(--accent); font-size: .83rem; font-weight: bold; }
+.package-card ul { padding-left: 19px; margin: 17px 0 23px; color: var(--muted); font-size: .9rem; }
+.package-card li { margin-bottom: 5px; }
+.note { padding: 16px 18px; margin-top: 25px; color: #6b4a2e; background: #fbf0e2; border-left: 4px solid var(--accent); border-radius: 8px; font-size: .9rem; }
+
+.detail-hero { min-height: 470px; display: flex; align-items: end; padding: 80px 0; color: var(--white); background: linear-gradient(0deg, rgba(12,35,31,.82), rgba(12,35,31,.08)), center/cover; }
+.detail-hero.go { background-image: linear-gradient(0deg, rgba(12,35,31,.82), rgba(12,35,31,.08)), url("../images/goa.svg"); }
+.detail-hero.kashmir { background-image: linear-gradient(0deg, rgba(12,35,31,.82), rgba(12,35,31,.08)), url("../images/kashmir.svg"); }
+.detail-hero.rajasthan { background-image: linear-gradient(0deg, rgba(12,35,31,.82), rgba(12,35,31,.08)), url("../images/rajasthan.svg"); }
+.detail-hero h1 { color: var(--white); margin-bottom: 8px; }
+.detail-hero p { max-width: 580px; margin-bottom: 0; font-size: 1.25rem; color: rgba(255,255,255,.86); }
+.detail-layout { display: grid; grid-template-columns: 1.35fr .65fr; gap: 60px; align-items: start; }
+.detail-section { margin-bottom: 46px; }
+.detail-section h2 { font-size: 2.1rem; }
+.highlight-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 24px 0 0; }
+.highlight { padding: 18px 14px; text-align: center; color: var(--primary); background: #edf3ee; border-radius: 12px; font-weight: bold; font-size: .88rem; }
+.place-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 11px; padding: 0; list-style: none; }
+.place-list li { padding: 15px 17px; background: var(--white); border: 1px solid var(--line); border-radius: 10px; }
+.itinerary { width: 100%; border-collapse: collapse; background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: 0 8px 25px rgba(22,42,39,.05); }
+.itinerary th, .itinerary td { padding: 16px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
+.itinerary th { color: var(--white); background: var(--primary); font-size: .85rem; }
+.itinerary tr:last-child td { border-bottom: 0; }
+.detail-aside { position: sticky; top: 25px; padding: 25px; background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); }
+.detail-aside h3 { margin-bottom: 14px; }
+.detail-aside p { color: var(--muted); font-size: .92rem; }
+.detail-aside .button { width: 100%; text-align: center; }
+
+.about-grid, .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+.about-image { min-height: 470px; border-radius: var(--radius); background: url("../images/meghalaya.svg") center/cover; box-shadow: var(--shadow); }
+.story-copy p { color: var(--muted); font-size: 1.05rem; }
+.simple-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 42px; }
+.simple-card { padding: 23px; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); }
+.simple-card p { margin-bottom: 0; color: var(--muted); font-size: .9rem; }
+.contact-card { padding: 30px; }
+.contact-card h2 { font-size: 2rem; }
+.contact-form { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.contact-form .full { grid-column: 1 / -1; }
+.radio-group { display: flex; flex-wrap: wrap; gap: 15px; padding: 11px 0; }
+.radio-group label { display: flex; align-items: center; gap: 7px; color: var(--muted); font-size: .9rem; }
+.radio-group input { width: auto; min-height: auto; accent-color: var(--primary); }
+
+.site-footer { padding: 54px 0 24px; color: rgba(255,255,255,.72); background: var(--dark); }
+.footer-grid { display: grid; grid-template-columns: 1.5fr repeat(3, 1fr); gap: 30px; padding-bottom: 38px; }
+.site-footer h3 { color: var(--white); font: bold 1rem "Trebuchet MS", sans-serif; }
+.site-footer p { max-width: 250px; font-size: .9rem; }
+.site-footer ul { padding: 0; margin: 0; list-style: none; }
+.site-footer li { margin-bottom: 8px; font-size: .88rem; }
+.site-footer a:hover { color: var(--accent); }
+.footer-brand { color: var(--white); font-size: 1.15rem; font-weight: bold; letter-spacing: .16em; }
+.copyright { padding-top: 20px; border-top: 1px solid rgba(255,255,255,.14); font-size: .8rem; }
+
+@media (max-width: 960px) {
+  .destinations-grid { grid-template-columns: repeat(3, 1fr); }
+  .feature-grid { grid-template-columns: repeat(2, 1fr); }
+  .detail-layout, .about-grid, .contact-layout { grid-template-columns: 1fr; gap: 35px; }
+  .detail-aside { position: static; }
+  .about-image { min-height: 350px; order: -1; }
+  .footer-grid { grid-template-columns: 1.5fr 1fr 1fr; }
+  .footer-grid > :first-child { grid-column: 1 / -1; }
+}
+@media (max-width: 768px) {
+  .navbar { min-height: auto; padding-top: 18px; padding-bottom: 14px; align-items: start; flex-direction: column; gap: 13px; }
+  .nav-links { width: 100%; flex-wrap: wrap; gap: 2px; }
+  .nav-links a { padding: 7px 10px; font-size: .8rem; }
+  .section { padding: 62px 0; }
+  .container { width: min(100% - 32px, 600px); }
+  .hero { min-height: 580px; }
+  .explore-form, .card-grid, .destinations-grid, .testimonial-grid { grid-template-columns: 1fr 1fr; }
+  .explore-form { padding: 18px; }
+  .explore-form label:first-child { grid-column: 1 / -1; }
+  .explore-form .button { width: 100%; }
+  .experience-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 210px 180px 180px; }
+  .experience-card:first-child { grid-row: span 1; grid-column: 1 / -1; }
+  .newsletter { padding: 35px 25px; }
+  .newsletter-form { flex-direction: column; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 150px; }
+  .gallery-item.tall { grid-row: span 1; }
+  .gallery-item.wide { grid-column: span 2; }
+  .highlight-grid { grid-template-columns: repeat(2, 1fr); }
+  .simple-cards { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .card-grid, .destinations-grid, .testimonial-grid, .feature-grid, .contact-form { grid-template-columns: 1fr; }
+  .contact-form .full { grid-column: auto; }
+  .explore-form { grid-template-columns: 1fr; }
+  .explore-form label:first-child { grid-column: auto; }
+  .experience-grid { grid-template-columns: 1fr; grid-template-rows: repeat(4, 190px); }
+  .experience-card:first-child { grid-column: auto; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid > :first-child { grid-column: 1 / -1; }
+  .place-list { grid-template-columns: 1fr; }
+  .itinerary { font-size: .85rem; }
+  .itinerary th, .itinerary td { padding: 11px 9px; }
+}
