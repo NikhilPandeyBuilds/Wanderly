@@ -1,11 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Learn about the student-designed Wanderly travel exploration project."><title>About Wanderly | Wanderly</title><link rel="stylesheet" href="css/style.css"></head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about Wanderly - an academic Java & Web mini-project created to discover incredible travel journeys.">
+  <title>About Wanderly | Travel Explorer Project</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧭</text></svg>">
+</head>
 <body>
-<header class="site-header"><nav class="navbar" aria-label="Main navigation"><a class="brand" href="index.html">WANDERLY</a><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="destinations.html">Destinations</a></li><li><a href="packages.html">Packages</a></li><li><a class="active" href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></nav></header>
-<main><section class="page-banner"><div class="container"><p class="eyebrow">The idea behind the project</p><h1>About Wanderly</h1><p>Travel is more than reaching a destination. It's about the places you discover, the people you meet and the stories you bring back.</p></div></section>
-<section class="section"><div class="container about-grid"><div class="story-copy"><p class="eyebrow">A student-made explorer</p><h2>Made for curious travellers.</h2><p>Wanderly is a student-designed travel exploration platform created as an HTML and CSS college project. It brings together destination inspiration, simple trip ideas and a clear visual system that is easy to understand and enjoyable to browse.</p><p>Everything you see here is sample content for a practical project. The destinations, packages, testimonials and artwork are designed to demonstrate structure, styling, responsive layouts and accessible HTML.</p><a class="button" href="destinations.html">Start exploring</a></div><div class="about-image" role="img" aria-label="Illustrated placeholder artwork of a green mountain landscape"></div></div></section>
-<section class="section" style="background:#edf3ee"><div class="container"><div class="section-heading"><p class="eyebrow">What guides us</p><h2>Our Mission</h2><p class="lead">Make the first step of planning feel as exciting as the journey itself.</p></div><div class="simple-cards"><article class="simple-card"><h3>What We Offer</h3><p>Destination ideas, sample packages and visual inspiration for exploring India.</p></article><article class="simple-card"><h3>Why Travel With Us</h3><p>Our layouts keep information easy to scan while leaving room for imagination.</p></article><article class="simple-card"><h3>Built to Learn</h3><p>A focused example of how fundamental HTML5 and CSS3 can create a polished experience.</p></article></div></div></section>
-</main>
-<footer class="site-footer"><div class="container"><div class="footer-grid"><div><p class="footer-brand">WANDERLY</p><p>Discover places worth remembering.</p></div><div><h3>Explore</h3><ul><li><a href="destinations.html">Destinations</a></li><li><a href="packages.html">Packages</a></li></ul></div><div><h3>About</h3><ul><li><a href="about.html">Our story</a></li><li><a href="contact.html">Contact</a></li></ul></div><div><h3>Social</h3><ul><li><a href="#">Instagram</a></li><li><a href="#">Facebook</a></li><li><a href="#">LinkedIn</a></li></ul></div></div><p class="copyright">© 2026 Wanderly. College Project.</p></div></footer>
-</body></html>
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="index.html">
+        <span class="brand-icon">✦</span> WANDERLY
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a class="active" href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="nav-cta" href="contact.html">Plan a Trip</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Banner -->
+    <section class="page-banner">
+      <div class="container">
+        <span class="eyebrow">The Story Behind the Project</span>
+        <h1>About Wanderly</h1>
+        <p>Travel is more than reaching a destination — it's about the paths discovered, people encountered, and stories brought home.</p>
+      </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="section">
+      <div class="container about-grid">
+        <div class="story-copy">
+          <span class="eyebrow">Our Vision</span>
+          <h2>Crafted for Curious Explorers</h2>
+          <p>Wanderly was conceived as an intelligent, aesthetic travel exploration platform. It combines curated Indian itineraries with intuitive digital tools to make travel planning as inspiring as the journey itself.</p>
+          <p>Developed as a comprehensive <strong>Java &amp; Web Technologies Mini Project</strong>, Wanderly showcases modern software principles: responsive visual design, accessible HTML5, clean modular JavaScript, and a robust Java 21 REST backend server.</p>
+          <div style="margin-top: 30px;">
+            <a class="button" href="destinations.html">Start Exploring Destinations &rarr;</a>
+          </div>
+        </div>
+        <div class="about-image" role="img" aria-label="Traveller exploring scenic mountain landscapes"></div>
+      </div>
+    </section>
+
+    <!-- Project Architecture / Academic Overview -->
+    <section class="section" style="background: #edf4f0;">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Academic &amp; Technical Highlights</span>
+          <h2>Project Architecture</h2>
+          <p class="lead">Built to demonstrate clean software design, client-side responsiveness, and lightweight backend services.</p>
+        </div>
+        <div class="simple-cards">
+          <article class="simple-card">
+            <h3>🎨 Sleek Frontend</h3>
+            <p>Built with semantic HTML5, modern CSS3 variables, responsive grid systems, micro-interactions, and vanilla JavaScript.</p>
+          </article>
+          <article class="simple-card">
+            <h3>☕ Java 21 Backend</h3>
+            <p>Powered by a zero-dependency Java <code>HttpServer</code> supporting virtual threads, static asset hosting, and REST JSON endpoints.</p>
+          </article>
+          <article class="simple-card">
+            <h3>⚡ Dynamic Utilities</h3>
+            <p>Interactive real-time destination filtering, instant trip budget estimator, modal previews, and booking enquiry capture.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Frequently Asked Questions -->
+    <section class="section">
+      <div class="container" style="max-width: 820px;">
+        <div class="section-heading center">
+          <span class="eyebrow">Got Questions?</span>
+          <h2>Frequently Asked Questions</h2>
+          <p class="lead">Everything you need to know about planning journeys with Wanderly.</p>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item active">
+            <button class="faq-question">How does Wanderly curate its travel itineraries?</button>
+            <div class="faq-answer">
+              Every route is structured around real travel pacing — factoring in transfer times, scenic photography stops, local dining gems, and rest windows so you never feel rushed.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Can packages be customized for couples or larger groups?</button>
+            <div class="faq-answer">
+              Yes! Use our interactive Trip Cost Estimator on the Packages page to adjust traveller count and tier, or submit a request on the Contact page for tailored day plans.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How does the Java server integration work?</button>
+            <div class="faq-answer">
+              The project includes <code>WanderlyServer.java</code> which runs natively with Java 21, serving the frontend and handling API routes such as <code>/api/destinations</code> and <code>/api/contact</code>.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What is included in the estimated package price?</button>
+            <div class="faq-answer">
+              Standard estimates cover handpicked accommodations, dedicated AC transfers, daily breakfasts, sightseeing permits, and 24/7 road concierge support.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-brand">✦ WANDERLY</p>
+          <p>Discover places worth remembering. Curated routes, authentic stays, and thoughtful travel across India.</p>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="destinations.html">All Destinations</a></li>
+            <li><a href="packages.html">Curated Packages</a></li>
+            <li><a href="destination-goa.html">Goa Guide</a></li>
+            <li><a href="destination-kashmir.html">Kashmir Guide</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>About</h3>
+          <ul>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="packages.html#tripCalculator">Trip Cost Calculator</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Connect</h3>
+          <ul>
+            <li><a href="#">Instagram @wanderly.travel</a></li>
+            <li><a href="#">LinkedIn /wanderly</a></li>
+            <li><a href="contact.html">Support Concierge</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2026 Wanderly. Java Mini Project Submission.</p>
+        <p>Built with Java 21, HTML5, Modern CSS &amp; Vanilla JavaScript.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

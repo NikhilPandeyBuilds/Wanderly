@@ -1,15 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Sample travel packages designed for the Wanderly college project."><title>Packages | Wanderly</title><link rel="stylesheet" href="css/style.css"></head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Curated travel packages across India designed for meaningful exploration and unforgettable memories.">
+  <title>Curated Packages | Wanderly</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧭</text></svg>">
+</head>
 <body>
-<header class="site-header"><nav class="navbar" aria-label="Main navigation"><a class="brand" href="index.html">WANDERLY</a><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="destinations.html">Destinations</a></li><li><a class="active" href="packages.html">Packages</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></nav></header>
-<main><section class="page-banner"><div class="container"><p class="eyebrow">Made for meaningful getaways</p><h1>Curated Travel Packages</h1><p>Simple starting points for trips that leave enough room for discovery.</p></div></section>
-<section class="section"><div class="container"><div class="card-grid">
-<article class="package-card"><div class="package-top"><div><h3>Goa Escape</h3><p class="duration">3 Days / 2 Nights</p></div><p class="price">₹12,999</p></div><p class="muted">A sunlit coastal break with time for beaches, cafés and unplanned detours.</p><ul><li>Beach stay</li><li>Local sightseeing</li><li>Breakfast included</li></ul><a class="button secondary" href="contact.html">View Package</a></article>
-<article class="package-card"><div class="package-top"><div><h3>Kashmir Discovery</h3><p class="duration">5 Days / 4 Nights</p></div><p class="price">₹24,999</p></div><p class="muted">See the valley through lake mornings, meadow walks and mountain roads.</p><ul><li>Houseboat experience</li><li>Gulmarg day trip</li><li>Breakfast included</li></ul><a class="button secondary" href="contact.html">View Package</a></article>
-<article class="package-card"><div class="package-top"><div><h3>Rajasthan Heritage</h3><p class="duration">6 Days / 5 Nights</p></div><p class="price">₹27,999</p></div><p class="muted">A colourful route through forts, palaces, crafts and desert sunsets.</p><ul><li>Heritage stays</li><li>City transfers</li><li>Local food walk</li></ul><a class="button secondary" href="contact.html">View Package</a></article>
-<article class="package-card"><div class="package-top"><div><h3>Kerala Backwaters</h3><p class="duration">4 Days / 3 Nights</p></div><p class="price">₹18,999</p></div><p class="muted">A calm green journey from misty hills to still water and spice gardens.</p><ul><li>Houseboat cruise</li><li>Tea garden visit</li><li>Breakfast included</li></ul><a class="button secondary" href="contact.html">View Package</a></article>
-<article class="package-card"><div class="package-top"><div><h3>Ladakh Adventure</h3><p class="duration">6 Days / 5 Nights</p></div><p class="price">₹29,999</p></div><p class="muted">A high-altitude adventure built around open roads and unforgettable views.</p><ul><li>Monastery visits</li><li>Scenic transfers</li><li>Local guide</li></ul><a class="button secondary" href="contact.html">View Package</a></article>
-</div><p class="note">Prices shown are illustrative and created for this college project.</p></div></section></main>
-<footer class="site-footer"><div class="container"><div class="footer-grid"><div><p class="footer-brand">WANDERLY</p><p>Discover places worth remembering.</p></div><div><h3>Explore</h3><ul><li><a href="destinations.html">Destinations</a></li><li><a href="packages.html">Packages</a></li></ul></div><div><h3>About</h3><ul><li><a href="about.html">Our story</a></li><li><a href="contact.html">Contact</a></li></ul></div><div><h3>Social</h3><ul><li><a href="#">Instagram</a></li><li><a href="#">Facebook</a></li><li><a href="#">LinkedIn</a></li></ul></div></div><p class="copyright">© 2026 Wanderly. College Project.</p></div></footer>
-</body></html>
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="index.html">
+        <span class="brand-icon">✦</span> WANDERLY
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a class="active" href="packages.html">Packages</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="nav-cta" href="contact.html">Plan a Trip</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Banner -->
+    <section class="page-banner">
+      <div class="container">
+        <span class="eyebrow">Made for Meaningful Getaways</span>
+        <h1>Curated Travel Packages</h1>
+        <p>Thoughtfully planned routes balancing iconic sights with unhurried local discoveries and handpicked boutique stays.</p>
+      </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section class="section">
+      <div class="container">
+        <div class="card-grid">
+          <!-- 1. Goa Escape -->
+          <article class="package-card">
+            <div>
+              <div class="package-top">
+                <div>
+                  <h3>Goa Escape</h3>
+                  <span class="duration">3 Days / 2 Nights • Coastal Break</span>
+                </div>
+                <div class="price">₹12,999 <small style="font-size:0.75rem; color:var(--text-muted); font-weight:400; display:block;">per person</small></div>
+              </div>
+              <p class="muted">A sunlit coastal break with time for secret coves, Portuguese heritage, and beachside café dining.</p>
+              <ul>
+                <li>✓ 4-Star Beachside Resort Stay</li>
+                <li>✓ Old Goa Heritage &amp; Fort Aguada Tour</li>
+                <li>✓ Daily Artisan Breakfast Included</li>
+                <li>✓ Private AC Airport Transfers</li>
+              </ul>
+            </div>
+            <a class="button" href="contact.html?destination=Goa">Book This Package</a>
+          </article>
+
+          <!-- 2. Kashmir Discovery -->
+          <article class="package-card">
+            <div>
+              <div class="package-top">
+                <div>
+                  <h3>Kashmir Discovery</h3>
+                  <span class="duration">5 Days / 4 Nights • Valley Charm</span>
+                </div>
+                <div class="price">₹24,999 <small style="font-size:0.75rem; color:var(--text-muted); font-weight:400; display:block;">per person</small></div>
+              </div>
+              <p class="muted">Experience the paradise valley through tranquil Dal Lake mornings, alpine meadow walks, and mountain air.</p>
+              <ul>
+                <li>✓ Heritage Cedar Houseboat Stay on Dal Lake</li>
+                <li>✓ Gulmarg Gondola Day Excursion</li>
+                <li>✓ Pahalgam Valley Walk &amp; Apple Orchard Visit</li>
+                <li>✓ Dedicated Chauffeur &amp; Local Guide</li>
+              </ul>
+            </div>
+            <a class="button" href="contact.html?destination=Kashmir">Book This Package</a>
+          </article>
+
+          <!-- 3. Rajasthan Heritage -->
+          <article class="package-card">
+            <div>
+              <div class="package-top">
+                <div>
+                  <h3>Rajasthan Heritage</h3>
+                  <span class="duration">6 Days / 5 Nights • Royal Trail</span>
+                </div>
+                <div class="price">₹27,999 <small style="font-size:0.75rem; color:var(--text-muted); font-weight:400; display:block;">per person</small></div>
+              </div>
+              <p class="muted">A colorful route through magnificent sandstone forts, royal palaces, desert starry skies, and artisan markets.</p>
+              <ul>
+                <li>✓ Restored Heritage Haveli Accommodations</li>
+                <li>✓ Amer Fort &amp; City Palace Guided Entry</li>
+                <li>✓ Sunset Desert Safari with Folk Performance</li>
+                <li>✓ Old City Culinary Walk &amp; Handicraft Tours</li>
+              </ul>
+            </div>
+            <a class="button" href="contact.html?destination=Rajasthan">Book This Package</a>
+          </article>
+
+          <!-- 4. Kerala Backwaters -->
+          <article class="package-card">
+            <div>
+              <div class="package-top">
+                <div>
+                  <h3>Kerala Backwaters</h3>
+                  <span class="duration">4 Days / 3 Nights • Serene Escape</span>
+                </div>
+                <div class="price">₹18,999 <small style="font-size:0.75rem; color:var(--text-muted); font-weight:400; display:block;">per person</small></div>
+              </div>
+              <p class="muted">A lush green journey from misty Munnar hills to tranquil Alleppey waters and spice plantations.</p>
+              <ul>
+                <li>✓ Private Kettuvallam Houseboat Cruise with Chef</li>
+                <li>✓ Munnar Tea Plantation &amp; Tasting Tour</li>
+                <li>✓ Traditional Ayurvedic Rejuvenation Session</li>
+                <li>✓ All Meals Included on Houseboat</li>
+              </ul>
+            </div>
+            <a class="button" href="contact.html?destination=Kerala">Book This Package</a>
+          </article>
+
+          <!-- 5. Ladakh High Roads -->
+          <article class="package-card">
+            <div>
+              <div class="package-top">
+                <div>
+                  <h3>Ladakh Adventure</h3>
+                  <span class="duration">6 Days / 5 Nights • High Passes</span>
+                </div>
+                <div class="price">₹29,999 <small style="font-size:0.75rem; color:var(--text-muted); font-weight:400; display:block;">per person</small></div>
+              </div>
+              <p class="muted">A breathtaking high-altitude expedition across Khardung La pass, Nubra Valley sand dunes, and blue Pangong Tso.</p>
+              <ul>
+                <li>✓ Deluxe Glamping Camps at Pangong Tso</li>
+                <li>✓ Historic Thiksey &amp; Hemis Monastery Visits</li>
+                <li>✓ Double-Humped Bactrian Camel Ride in Nubra</li>
+                <li>✓ Oxygen Cylinder Backup &amp; High-Altitude Guide</li>
+              </ul>
+            </div>
+            <a class="button" href="contact.html?destination=Ladakh">Book This Package</a>
+          </article>
+
+          <!-- 6. Andaman Coral Isles -->
+          <article class="package-card">
+            <div>
+              <div class="package-top">
+                <div>
+                  <h3>Andaman Coral Isles</h3>
+                  <span class="duration">5 Days / 4 Nights • Tropical Oasis</span>
+                </div>
+                <div class="price">₹31,999 <small style="font-size:0.75rem; color:var(--text-muted); font-weight:400; display:block;">per person</small></div>
+              </div>
+              <p class="muted">Pristine white sands, crystal-clear diving bays, historic Cellular Jail, and lush coastal trails.</p>
+              <ul>
+                <li>✓ Beachfront Cottage on Havelock Island</li>
+                <li>✓ Radhanagar Sunset &amp; Elephant Beach Speedboat</li>
+                <li>✓ Snorkeling Experience with Marine Certified Guide</li>
+                <li>✓ Inter-Island Catamaran Cruise Tickets</li>
+              </ul>
+            </div>
+            <a class="button" href="contact.html?destination=Andaman">Book This Package</a>
+          </article>
+        </div>
+
+        <p class="note">✦ <strong>College Project Note:</strong> Prices and package details are curated for the Wanderly Java Web mini-project demonstration. All packages include flexible cancellation and customized dates.</p>
+
+        <!-- Interactive Trip Cost Estimator Widget -->
+        <div class="calculator-card" id="tripCalculator">
+          <div class="calc-grid">
+            <div class="calc-inputs">
+              <span class="eyebrow">Interactive Trip Estimator</span>
+              <h2>Calculate Your Custom Journey</h2>
+              <p class="muted">Customize destination, group size, and travel style to see a live cost estimation.</p>
+
+              <div>
+                <label class="field">
+                  <span>Select Destination</span>
+                  <select id="calcDestination">
+                    <option value="goa">Goa (Sun, Coast &amp; Heritage)</option>
+                    <option value="kashmir" selected>Kashmir (Lakes &amp; Valleys)</option>
+                    <option value="rajasthan">Rajasthan (Forts &amp; Desert)</option>
+                    <option value="kerala">Kerala (Backwaters &amp; Tea Hills)</option>
+                    <option value="ladakh">Ladakh (High Passes &amp; Monasteries)</option>
+                    <option value="andaman">Andaman (Coral Reefs &amp; Islands)</option>
+                    <option value="sikkim">Sikkim (Monasteries &amp; Peaks)</option>
+                    <option value="meghalaya">Meghalaya (Living Root Bridges)</option>
+                  </select>
+                </label>
+              </div>
+
+              <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                <div>
+                  <label class="field">
+                    <span>Number of Travellers</span>
+                  </label>
+                  <div class="calc-counter-wrap">
+                    <button type="button" class="calc-counter-btn" id="calcTravellersMinus">&minus;</button>
+                    <input type="number" id="calcTravellers" value="2" min="1" max="15" style="text-align: center;">
+                    <button type="button" class="calc-counter-btn" id="calcTravellersPlus">&plus;</button>
+                  </div>
+                </div>
+
+                <div>
+                  <label class="field">
+                    <span>Trip Duration (Days)</span>
+                    <input type="number" id="calcDays" value="5" min="2" max="21">
+                  </label>
+                </div>
+              </div>
+
+              <div>
+                <label class="field">
+                  <span>Travel Style</span>
+                </label>
+                <div class="tier-selector">
+                  <div class="tier-option">
+                    <input type="radio" id="tierBudget" name="calcTier" value="budget">
+                    <label for="tierBudget">Backpacker (Standard)</label>
+                  </div>
+                  <div class="tier-option">
+                    <input type="radio" id="tierComfort" name="calcTier" value="comfort" checked>
+                    <label for="tierComfort">Comfort (Boutique)</label>
+                  </div>
+                  <div class="tier-option">
+                    <input type="radio" id="tierLuxury" name="calcTier" value="luxury">
+                    <label for="tierLuxury">Luxury (5-Star / Heritage)</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dynamic Output Box -->
+            <div class="calc-result-box">
+              <span class="eyebrow">Estimated Total</span>
+              <div class="calc-total-amount" id="calcTotal">₹24,999</div>
+              <div class="calc-per-person" id="calcPerPerson">₹12,499 / traveller</div>
+              <p style="font-size: 0.85rem; color: rgba(255,255,255,0.75); margin-bottom: 24px;">Includes stays, private transfers, daily breakfasts, and guided city excursions.</p>
+              <a class="button" href="contact.html">Request This Itinerary &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-brand">✦ WANDERLY</p>
+          <p>Discover places worth remembering. Curated routes, authentic stays, and thoughtful travel across India.</p>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="destinations.html">All Destinations</a></li>
+            <li><a href="packages.html">Curated Packages</a></li>
+            <li><a href="destination-goa.html">Goa Guide</a></li>
+            <li><a href="destination-kashmir.html">Kashmir Guide</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>About</h3>
+          <ul>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="packages.html#tripCalculator">Trip Cost Calculator</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Connect</h3>
+          <ul>
+            <li><a href="#">Instagram @wanderly.travel</a></li>
+            <li><a href="#">LinkedIn /wanderly</a></li>
+            <li><a href="contact.html">Support Concierge</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2026 Wanderly. Java Mini Project Submission.</p>
+        <p>Built with Java 21, HTML5, Modern CSS &amp; Vanilla JavaScript.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,8 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="A sample Wanderly guide to Goa."><title>Goa Guide | Wanderly</title><link rel="stylesheet" href="css/style.css"></head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Comprehensive travel guide to Goa: coastal escapes, Portuguese heritage, beaches and dining.">
+  <title>Goa Destination Guide | Wanderly</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧭</text></svg>">
+</head>
 <body>
-<header class="site-header"><nav class="navbar" aria-label="Main navigation"><a class="brand" href="index.html">WANDERLY</a><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a class="active" href="destinations.html">Destinations</a></li><li><a href="packages.html">Packages</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></nav></header>
-<main><section class="detail-hero go"><div class="container"><p class="eyebrow">Destination guide</p><h1>GOA</h1><p>Where the ocean meets the good life.</p></div></section><section class="section"><div class="container detail-layout"><div><section class="detail-section"><p class="eyebrow">A coastal classic</p><h2>About Goa</h2><p class="lead">Goa rewards travellers who leave some space in the day. Follow the coast for a quiet cove, turn inland for a spice-scented lunch, and let sunset become the only appointment that matters.</p><div class="highlight-grid"><div class="highlight">Beaches</div><div class="highlight">Heritage</div><div class="highlight">Local Cuisine</div><div class="highlight">Sunsets</div></div></section><section class="detail-section"><h2>Places to Visit</h2><ul class="place-list"><li>Baga Beach</li><li>Fort Aguada</li><li>Dudhsagar Falls</li><li>Panaji</li><li>Palolem</li></ul></section><section class="detail-section"><h2>Suggested Itinerary</h2><table class="itinerary"><thead><tr><th>Day</th><th>Plan</th></tr></thead><tbody><tr><td>Day 1</td><td>Arrival, beach and sunset</td></tr><tr><td>Day 2</td><td>Fort Aguada, Old Goa and local food</td></tr><tr><td>Day 3</td><td>Dudhsagar and departure</td></tr></tbody></table></section></div><aside class="detail-aside"><h3>Ready to go?</h3><p>Tell us what kind of Goa escape you have in mind and use this guide as your starting point.</p><a class="button" href="contact.html">Send Enquiry</a></aside></div></section></main>
-<footer class="site-footer"><div class="container"><div class="footer-grid"><div><p class="footer-brand">WANDERLY</p><p>Discover places worth remembering.</p></div><div><h3>Explore</h3><ul><li><a href="destinations.html">Destinations</a></li><li><a href="packages.html">Packages</a></li></ul></div><div><h3>About</h3><ul><li><a href="about.html">Our story</a></li><li><a href="contact.html">Contact</a></li></ul></div><div><h3>Social</h3><ul><li><a href="#">Instagram</a></li><li><a href="#">Facebook</a></li><li><a href="#">LinkedIn</a></li></ul></div></div><p class="copyright">© 2026 Wanderly. College Project.</p></div></footer>
-</body></html>
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="index.html">
+        <span class="brand-icon">✦</span> WANDERLY
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="destinations.html">Destinations</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="nav-cta" href="contact.html?destination=Goa">Plan a Trip</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Destination Hero -->
+    <section class="detail-hero go">
+      <div class="container">
+        <span class="eyebrow">Curated Destination Guide</span>
+        <h1>GOA</h1>
+        <p>Where golden sands, Portuguese architecture, and ocean breeze create an effortless rhythm.</p>
+      </div>
+    </section>
+
+    <!-- Content & Sticky Sidebar Layout -->
+    <section class="section">
+      <div class="container detail-layout">
+        <div>
+          <!-- About Goa -->
+          <section class="detail-section">
+            <span class="eyebrow">Coastal Magic</span>
+            <h2>About Goa</h2>
+            <p class="lead">Goa is an unforgettable tapestry of Portuguese colonial heritage, palm-fringed coastlines, lively night markets, and sleepy inland backwaters. From the vibrant shacks of the north to the peaceful secluded coves of south Goa, it is the ultimate haven for both relaxation and discovery.</p>
+            
+            <div class="highlight-grid">
+              <div class="highlight">🏖️ Golden Beaches</div>
+              <div class="highlight">⛪ Latin Quarter</div>
+              <div class="highlight">🦐 Coastal Cuisine</div>
+              <div class="highlight">🌅 Sunset Cruises</div>
+            </div>
+          </section>
+
+          <!-- Top Places to Visit -->
+          <section class="detail-section">
+            <h2>Must-Visit Places</h2>
+            <ul class="place-list">
+              <li>Fort Aguada &amp; Sinquerim Lighthouse</li>
+              <li>Fontainhas (Latin Quarter in Panaji)</li>
+              <li>Dudhsagar Cascading Waterfalls</li>
+              <li>Palolem &amp; Agonda Crescent Beaches</li>
+              <li>Basilica of Bom Jesus (UNESCO Site)</li>
+              <li>Anjuna Flea Market &amp; Chapora Fort</li>
+            </ul>
+          </section>
+
+          <!-- Interactive Day-by-Day Itinerary -->
+          <section class="detail-section">
+            <h2>Suggested 4-Day Itinerary</h2>
+            <p class="muted">Click through each day to explore the curated timeline.</p>
+
+            <div class="itinerary-tabs">
+              <button class="itinerary-tab-btn active" data-target-day="day1">Day 1: Coast &amp; Sunsets</button>
+              <button class="itinerary-tab-btn" data-target-day="day2">Day 2: Heritage &amp; Flavours</button>
+              <button class="itinerary-tab-btn" data-target-day="day3">Day 3: Wilderness &amp; Waterfalls</button>
+              <button class="itinerary-tab-btn" data-target-day="day4">Day 4: South Goa Serenity</button>
+            </div>
+
+            <!-- Panel 1 -->
+            <div class="itinerary-panel active" id="day1">
+              <h4>Day 1: Arrival, Beachside Leisure &amp; Sunset Shacks</h4>
+              <p>Check into your coastal boutique resort. Spend an easy afternoon on Candolim or Ashvem beach. Watch the sun dip into the Arabian Sea while sampling fresh catch and coconut kokum cooler.</p>
+              <span class="category">Highlight: Golden Hour at Thalassa or Curlies</span>
+            </div>
+
+            <!-- Panel 2 -->
+            <div class="itinerary-panel" id="day2">
+              <h4>Day 2: Panaji Latin Quarters &amp; Old Goa Cathedrals</h4>
+              <p>Stroll past pastel yellow and indigo Portuguese villas in Fontainhas. Visit the grand 16th-century churches of Old Goa, followed by a traditional Goan fish curry thali in Panaji.</p>
+              <span class="category">Highlight: Walking Architecture Tour in Fontainhas</span>
+            </div>
+
+            <!-- Panel 3 -->
+            <div class="itinerary-panel" id="day3">
+              <h4>Day 3: Dudhsagar Waterfalls &amp; Organic Spice Plantation</h4>
+              <p>Take a morning jeep safari into the Bhagwan Mahavir Wildlife Sanctuary to witness the roaring four-tiered Dudhsagar falls. End the afternoon enjoying a traditional banana-leaf buffet at Sahakari Spice Farm.</p>
+              <span class="category">Highlight: Jungle Safari &amp; Vanilla-Cardamom Walk</span>
+            </div>
+
+            <!-- Panel 4 -->
+            <div class="itinerary-panel" id="day4">
+              <h4>Day 4: Palolem Kayaking &amp; Departure</h4>
+              <p>Head to peaceful Palolem Beach for morning sea kayaking to Butterfly Beach. Pick up cashew feni and spiced handicrafts before heading to Mopa or Dabolim airport.</p>
+              <span class="category">Highlight: Dolphin Spotting in Quiet Bays</span>
+            </div>
+          </section>
+        </div>
+
+        <!-- Sticky Sidebar -->
+        <aside class="detail-aside">
+          <span class="eyebrow">Trip Overview</span>
+          <h3>Plan Your Goa Escape</h3>
+          <p>Let our concierge arrange handpicked beachfront stays, private airport transfers, and customized tours.</p>
+
+          <div class="detail-fact-grid">
+            <div class="fact-item">
+              <small>Best Season</small>
+              <strong>Nov &ndash; Mar</strong>
+            </div>
+            <div class="fact-item">
+              <small>Trip Duration</small>
+              <strong>3 &ndash; 5 Days</strong>
+            </div>
+            <div class="fact-item">
+              <small>Airport</small>
+              <strong>GOI / GOX</strong>
+            </div>
+            <div class="fact-item">
+              <small>Avg. Package</small>
+              <strong>₹12,999 pp</strong>
+            </div>
+          </div>
+
+          <a class="button" href="contact.html?destination=Goa" style="margin-bottom:12px;">Enquire for Goa &rarr;</a>
+          <a class="button secondary" href="packages.html">View Packages</a>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-brand">✦ WANDERLY</p>
+          <p>Discover places worth remembering. Curated routes, authentic stays, and thoughtful travel across India.</p>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="destinations.html">All Destinations</a></li>
+            <li><a href="packages.html">Curated Packages</a></li>
+            <li><a href="destination-goa.html">Goa Guide</a></li>
+            <li><a href="destination-kashmir.html">Kashmir Guide</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>About</h3>
+          <ul>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="packages.html#tripCalculator">Trip Cost Calculator</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Connect</h3>
+          <ul>
+            <li><a href="#">Instagram @wanderly.travel</a></li>
+            <li><a href="#">LinkedIn /wanderly</a></li>
+            <li><a href="contact.html">Support Concierge</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2026 Wanderly. Java Mini Project Submission.</p>
+        <p>Built with Java 21, HTML5, Modern CSS &amp; Vanilla JavaScript.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
