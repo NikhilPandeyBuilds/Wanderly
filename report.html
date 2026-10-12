@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Project Report - Wanderly | LTCE</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap');
+
+    @page {
+      size: A4;
+      margin: 20mm 20mm 20mm 20mm;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f0f0f0;
+      font-family: 'Times New Roman', Times, serif;
+      color: #000;
+      line-height: 1.5;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      padding: 22mm 22mm 22mm 22mm;
+      margin: 20px auto;
+      background: #fff;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      position: relative;
+    }
+
+    .page-break {
+      page-break-after: always;
+      break-after: page;
+    }
+
+    /* Print settings */
+    @media print {
+      body {
+        background: transparent;
+      }
+      .page {
+        margin: 0;
+        box-shadow: none;
+        width: 100%;
+        min-height: auto;
+        padding: 0;
+      }
+      .no-print {
+        display: none !important;
+      }
+    }
+
+    /* Floating Print Button */
+    .print-bar {
+      position: fixed;
+      top: 15px;
+      right: 20px;
+      z-index: 1000;
+      background: #18463e;
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      font-family: sans-serif;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .print-btn {
+      background: #d89b5b;
+      color: #111;
+      border: none;
+      padding: 6px 14px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    /* College Header */
+    .college-header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .college-society {
+      font-size: 11pt;
+      margin-bottom: 3px;
+    }
+
+    .college-name {
+      font-size: 18pt;
+      font-weight: bold;
+      color: #1a237e;
+      margin: 2px 0;
+      letter-spacing: 0.5px;
+    }
+
+    .college-sub {
+      font-size: 10pt;
+      font-weight: bold;
+      margin-bottom: 2px;
+    }
+
+    .college-accreditation {
+      font-size: 8.5pt;
+      color: #333;
+      margin-bottom: 2px;
+    }
+
+    .college-address {
+      font-size: 9pt;
+      margin-bottom: 12px;
+    }
+
+    .divider-line {
+      border-bottom: 1.5px solid #000;
+      margin: 10px 0 20px;
+    }
+
+    .dept-title {
+      text-align: center;
+      font-size: 13pt;
+      font-weight: bold;
+      margin-top: 15px;
+      line-height: 1.3;
+    }
+
+    /* Cover Page Specific */
+    .report-title-box {
+      text-align: center;
+      margin: 60px 0;
+    }
+
+    .report-label {
+      font-size: 14pt;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .report-on {
+      font-size: 12pt;
+      font-style: italic;
+      margin-bottom: 15px;
+    }
+
+    .project-title {
+      font-size: 17pt;
+      font-weight: bold;
+      color: #0d1b2a;
+      text-transform: uppercase;
+      line-height: 1.35;
+      margin: 0 auto;
+      max-width: 90%;
+    }
+
+    .guide-box {
+      text-align: center;
+      margin: 45px 0 60px;
+    }
+
+    .guide-title {
+      font-size: 12pt;
+      margin-bottom: 8px;
+    }
+
+    .guide-name {
+      font-size: 13pt;
+      font-weight: bold;
+    }
+
+    .meta-footer {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 60px;
+      font-size: 11pt;
+    }
+
+    .meta-left strong, .meta-right strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .student-list {
+      list-style: none;
+      padding: 0;
+      margin: 4px 0 0;
+    }
+
+    .student-list li {
+      margin-bottom: 2px;
+    }
+
+    .submission-date {
+      text-align: center;
+      margin-top: 55px;
+      font-size: 11pt;
+      font-weight: bold;
+    }
+
+    /* Content Pages */
+    h2.section-heading {
+      text-align: center;
+      font-size: 14pt;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin: 25px 0 15px;
+      border-bottom: 1px solid #777;
+      padding-bottom: 4px;
+    }
+
+    h3.sub-heading {
+      font-size: 12pt;
+      font-weight: bold;
+      margin: 18px 0 8px;
+    }
+
+    p {
+      text-align: justify;
+      text-indent: 30px;
+      margin: 0 0 12px;
+      font-size: 11pt;
+      line-height: 1.55;
+    }
+
+    p.no-indent {
+      text-indent: 0;
+    }
+
+    table.data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 10pt;
+    }
+
+    table.data-table th, table.data-table td {
+      border: 1px solid #444;
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    table.data-table th {
+      background: #f2f2f2;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .diagram-box {
+      border: 1px solid #777;
+      background: #fafafa;
+      padding: 12px;
+      margin: 16px 0;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 8.5pt;
+      line-height: 1.25;
+      overflow-x: auto;
+      white-space: pre;
+    }
+
+    ol.ref-list {
+      margin: 0 0 15px;
+      padding-left: 24px;
+      font-size: 10.5pt;
+    }
+
+    ol.ref-list li {
+      margin-bottom: 8px;
+      text-align: justify;
+    }
+
+    ul.bullet-list {
+      margin: 0 0 12px;
+      padding-left: 28px;
+      font-size: 10.5pt;
+    }
+
+    ul.bullet-list li {
+      margin-bottom: 5px;
+      text-align: justify;
+    }
+
+    .sign-box {
+      margin-top: 50px;
+      text-align: right;
+      font-size: 11pt;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Print Bar for the User -->
+  <div class="print-bar no-print">
+    <span>Lokmanya Tilak College of Engineering - Project Report</span>
+    <button class="print-btn" onclick="window.print()">Print / Save as PDF (Ctrl+P)</button>
+  </div>
+
+  <!-- ==================== PAGE 1: TITLE / COVER PAGE ==================== -->
+  <div class="page page-break">
+    <div class="college-header">
+      <div class="college-society">Lokmanya Tilak Jankalyan Shikshan Sanstha's</div>
+      <div class="college-name">Lokmanya Tilak College of Engineering</div>
+      <div class="college-sub">An Autonomous Institute Affiliated to University of Mumbai</div>
+      <div class="college-accreditation">(Approved by AICTE, Accredited by NAAC 'A' Grade &amp; Four Programs by NBA)</div>
+      <div class="college-address">Sector-04, Koparkhairane, Navi Mumbai - 400 709</div>
+      <div class="divider-line"></div>
+      <div class="dept-title">
+        Department of Computer Science &amp; Engineering<br>
+        (Artificial Intelligence &amp; Machine Learning)
+      </div>
+    </div>
+
+    <div class="report-title-box">
+      <div class="report-label">Mini Project Report</div>
+      <div class="report-on">on</div>
+      <div class="project-title">
+        WANDERLY: Intelligent Travel Exploration &amp; Booking Management Platform
+      </div>
+    </div>
+
+    <div class="guide-box">
+      <div class="guide-title">Under the Guidance of</div>
+      <div class="guide-name">Faculty Name : Prof. ________________________</div>
+    </div>
+
+    <div class="meta-footer">
+      <div class="meta-left">
+        <strong>Prepared By :</strong>
+        <ul class="student-list">
+          <li>1. Nikhil Pandey</li>
+          <li>2. Student 2</li>
+          <li>3. Student 3</li>
+          <li>4. Student 4</li>
+        </ul>
+      </div>
+      <div class="meta-right">
+        <strong>Faculty Guide :</strong>
+        <div>Prof. ________________________</div>
+        <div style="font-size: 9pt; color: #555; margin-top: 4px;">Dept. of CSE (AIML), LTCE</div>
+      </div>
+    </div>
+
+    <div class="submission-date">
+      Submission Date : October 2026
+    </div>
+  </div>
+
+  <!-- ==================== PAGE 2: ACKNOWLEDGEMENT ==================== -->
+  <div class="page page-break">
+    <div class="college-header">
+      <div class="college-society">Lokmanya Tilak Jankalyan Shikshan Sanstha's</div>
+      <div class="college-name">Lokmanya Tilak College of Engineering</div>
+      <div class="college-sub">An Autonomous Institute Affiliated to University of Mumbai</div>
+      <div class="college-accreditation">(Approved by AICTE, Accredited by NAAC 'A' Grade &amp; Four Programs by NBA)</div>
+      <div class="college-address">Sector-04, Koparkhairane, Navi Mumbai - 400 709</div>
+      <div class="divider-line"></div>
+      <div class="dept-title">
+        Department of Computer Science &amp; Engineering<br>
+        (Artificial Intelligence &amp; Machine Learning)
+      </div>
+    </div>
+
+    <h2 class="section-heading" style="margin-top: 40px; margin-bottom: 30px;">ACKNOWLEDGEMENT</h2>
+
+    <p>
+      I would like to express my special thanks of gratitude to our Head of the Department <strong>[Teacher's Name]</strong>, our respected Principal, <strong>[Principal's Name]</strong>, and my project guide <strong>[Teacher's Name]</strong> who gave me the opportunity to do this mini project on the topic <strong>"Wanderly: Intelligent Travel Exploration &amp; Booking Management Platform"</strong>. Their guidance, continuous support, and valuable feedback helped me immensely in doing research and learning about many new things.
+    </p>
+
+    <p>
+      I would also like to extend my heartfelt thanks to my parents and friends who supported me morally and assisted me in finalizing this project within the limited time frame.
+    </p>
+
+    <p>
+      Lastly, I am truly grateful to everyone who directly or indirectly contributed to the successful completion and deployment of this work.
+    </p>
+
+    <div class="sign-box">
+      <strong>Nikhil Pandey</strong><br>
+      [Roll No / Class / Div]<br>
+      Department of CSE (AIML)<br>
+      Lokmanya Tilak College of Engineering<br><br>
+      Date: October 12, 2026
+    </div>
+  </div>
+
+  <!-- ==================== PAGE 3: ABSTRACT, LITERATURE SURVEY, PROBLEM STATEMENT ==================== -->
+  <div class="page page-break">
+    <h2 class="section-heading">1. ABSTRACT</h2>
+    <p>
+      In the modern digital age, travel exploration often involves navigating fragmented, cluttered, and advertisement-heavy web portals that overwhelm travellers with rigid itineraries and unstructured information. <strong>Wanderly</strong> is a full-fledged, responsive web platform engineered to deliver an intuitive, aesthetic, and interactive travel discovery experience across premier destinations in India—spanning coastal getaways, Himalayan passes, royal heritage circuits, and backwaters.
+    </p>
+    <p>
+      The platform implements an asynchronous client-server architecture. The presentation tier is built utilizing semantic HTML5, modern CSS3 variables, fluid grid layouts, and modular vanilla JavaScript (ES6+). It features real-time client-side search and category filtering, an interactive trip cost estimator with dynamic pricing formulas, day-by-day interactive itinerary switchers, quick-preview modals, and toast notification queues. The backend service is powered by a zero-dependency <strong>Java 21 HTTP Server</strong> utilizing <code>com.sun.net.httpserver.HttpServer</code> with Project Loom's <strong>Virtual Threads</strong> (<code>Executors.newVirtualThreadPerTaskExecutor()</code>), handling static asset hosting and exposing REST API endpoints for destination catalog retrieval, dynamic stats, and booking inquiry persistence.
+    </p>
+
+    <h2 class="section-heading">2. LITERATURE SURVEY</h2>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Sr.</th>
+          <th>Paper / Platform</th>
+          <th>Methodology &amp; Technology</th>
+          <th>Advantages</th>
+          <th>Identified Limitations</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align:center;">1</td>
+          <td>Commercial Portals (MakeMyTrip, Yatra)</td>
+          <td>Cloud microservices, dynamic surge pricing, multi-tier databases.</td>
+          <td>Vast inventory of flights, hotels, and mass tours.</td>
+          <td>Cluttered UI, high cognitive load, rigid pre-set packages.</td>
+        </tr>
+        <tr>
+          <td style="text-align:center;">2</td>
+          <td>TripAdvisor &amp; Travel Blogs</td>
+          <td>Crowdsourced forums, static narrative blog entries.</td>
+          <td>Rich user reviews and community photography.</td>
+          <td>Lacks real-time interactive cost calculators &amp; offline support.</td>
+        </tr>
+        <tr>
+          <td style="text-align:center;">3</td>
+          <td>W3C Web Standards &amp; Modern CSS3</td>
+          <td>CSS Custom Properties, Flexbox, Grid, semantic HTML5.</td>
+          <td>High render speeds, accessibility, responsive UI.</td>
+          <td>Often demonstrated without standalone backend integration.</td>
+        </tr>
+        <tr>
+          <td style="text-align:center;">4</td>
+          <td>Java Concurrency (JEP 444 / Project Loom)</td>
+          <td>Virtual Threads for high-throughput I/O requests.</td>
+          <td>Lightweight request-per-task model with zero external libraries.</td>
+          <td>Underutilized in undergraduate curriculum projects.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="section-heading">3. PROBLEM STATEMENT</h2>
+    <p>
+      <strong>Existing Challenges:</strong> Traditional travel portals present excessive visual clutter, opaque pricing calculators, and heavy third-party framework overheads. Users often encounter friction when attempting to estimate custom trip budgets or explore day-wise itineraries without undergoing cumbersome sign-up processes.
+    </p>
+    <p>
+      <strong>Proposed Solution:</strong> Wanderly addresses these challenges by delivering an elegant, distraction-free travel explorer featuring: (i) instant client-side category and keyword filtering; (ii) a live interactive trip cost estimator; (iii) interactive day-by-day tabs; and (iv) a robust, lightweight Java 21 REST backend server.
+    </p>
+  </div>
+
+  <!-- ==================== PAGE 4: SYSTEM DESIGN & FLOWCHARTS ==================== -->
+  <div class="page page-break">
+    <h2 class="section-heading">4. FLOWCHART / USE CASE DIAGRAM (SOLUTION DEMONSTRATION)</h2>
+    
+    <h3 class="sub-heading">4.1 System Architecture Flowchart</h3>
+    <div class="diagram-box">
++--------------------------------------------------------------------------+
+|                              USER CLIENT                                 |
+|      (Web Browser: Chrome / Edge / Firefox / Safari / Mobile Devices)    |
++--------------------------------------------------------------------------+
+                                     |
+                    HTTP Requests / User Interactions
+                                     v
++--------------------------------------------------------------------------+
+|                        PRESENTATION LAYER (FRONTEND)                     |
+|  - Semantic HTML5 (index, destinations, packages, about, contact)        |
+|  - Modern CSS3 (Variables, Flexbox, Grid, Glassmorphism, Badges)         |
+|  - Vanilla JavaScript ES6+ Engine:                                       |
+|    * Real-time Category Filtering (Coast, Mountains, Nature, Heritage)   |
+|    * Interactive Trip Cost Estimator Widget                              |
+|    * Quick-View Modal Preview & Day-by-Day Itinerary Tabs                |
+|    * Wishlist Heart Toggle & Animated Toast Notifications                |
++--------------------------------------------------------------------------+
+                                     |
+                      REST API Calls (JSON) / POST Inquiries
+                                     v
++--------------------------------------------------------------------------+
+|                        APPLICATION LAYER (JAVA BACKEND)                  |
+|                   WanderlyServer.java (Java 21 HTTP Server)              |
+|                                                                          |
+|   +------------------------------------------------------------------+   |
+|   |         Virtual Threads Executor (Per-Task Concurrency)          |   |
+|   +------------------------------------------------------------------+   |
+|        |                        |                       |                |
+|        v                        v                       v                |
+|  Static Asset Handler     REST API Handler      Inquiry Controller       |
+|  (MIME: HTML, CSS,       - /api/destinations   - /api/contact            |
+|   JS, JPG, SVG)          - /api/packages       - Validation & Booking    |
+|                          - /api/stats            Ref (WND-XXXX)          |
++--------------------------------------------------------------------------+
+                                     |
+                              Data Persistence
+                                     v
++--------------------------------------------------------------------------+
+|                          IN-MEMORY DATA STORE                            |
+|             ConcurrentLinkedQueue / Data Records (Thread-Safe)           |
++--------------------------------------------------------------------------+
+    </div>
+
+    <h3 class="sub-heading">4.2 Use Case Diagram</h3>
+    <div class="diagram-box">
+                       WANDERLY TRAVEL PLATFORM
+      +---------------------------------------------------------+
+      |                                                         |
+      |   (UC-1: Browse Destinations & Curated Photos)          |
+      |                    ^                                    |
+      |                    |                                    |
+      |   (UC-2: Real-time Search & Category Filter)            |
+      |                    ^                                    |
+      |                    |                                    |
+(User) ---+-- (UC-3: View Day-by-Day Destination Itineraries)    |
+      |   |                                                     |
+      |   +-- (UC-4: Calculate Trip Cost via Interactive Widget)|
+      |   |                                                     |
+      |   +-- (UC-5: Save Destinations to Wishlist)             |
+      |   |                                                     |
+      |   +-- (UC-6: Submit Travel Brief / Booking Enquiry) ----+---> (Java Backend /
+      |   |                                                     |     Travel Admin)
+      |   +-- (UC-7: Subscribe to Travel Newsletter)            |
+      |                                                         |
+      +---------------------------------------------------------+
+    </div>
+  </div>
+
+  <!-- ==================== PAGE 5: TOOLS, FUTURE SCOPE & REFERENCES ==================== -->
+  <div class="page">
+    <h2 class="section-heading">5. FRONT END AND BACK END TOOLS (SPECIFICATIONS)</h2>
+
+    <h3 class="sub-heading">5.1 Front-End Tools &amp; Technologies</h3>
+    <ul class="bullet-list">
+      <li><strong>Semantic HTML5:</strong> Structured markup using accessible landmarks (<code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;footer&gt;</code>).</li>
+      <li><strong>Modern CSS3:</strong> Custom Properties (tokens), Flexbox, CSS Grid, glassmorphism (<code>backdrop-filter</code>), smooth hover elevations, and responsive breakpoints.</li>
+      <li><strong>Typography:</strong> Google Fonts (*Outfit* for clean UI body text, *Playfair Display* for serif headings).</li>
+      <li><strong>Vanilla JavaScript (ES6+):</strong> Asynchronous fetch calls, dynamic DOM manipulation, real-time filtering, modal management, and calculation algorithms.</li>
+    </ul>
+
+    <h3 class="sub-heading">5.2 Back-End Tools &amp; Technologies</h3>
+    <ul class="bullet-list">
+      <li><strong>Java 21 (OpenJDK / Oracle JDK 21 LTS):</strong> Modern object-oriented programming.</li>
+      <li><strong>Embedded Server:</strong> <code>com.sun.net.httpserver.HttpServer</code> (zero third-party dependencies required).</li>
+      <li><strong>Concurrency:</strong> Project Loom Virtual Threads (<code>Executors.newVirtualThreadPerTaskExecutor()</code>).</li>
+      <li><strong>REST Architecture:</strong> Endpoints for <code>/api/destinations</code>, <code>/api/packages</code>, <code>/api/stats</code>, and <code>/api/contact</code>.</li>
+    </ul>
+
+    <h3 class="sub-heading">5.3 Hardware &amp; Software Specifications</h3>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Component</th>
+          <th>Minimum Specification</th>
+          <th>Recommended Specification</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Processor</td>
+          <td>Intel Core i3 / AMD Ryzen 3</td>
+          <td>Intel Core i5 / AMD Ryzen 5 or higher</td>
+        </tr>
+        <tr>
+          <td>RAM</td>
+          <td>4 GB RAM</td>
+          <td>8 GB RAM or higher</td>
+        </tr>
+        <tr>
+          <td>Hard Disk Space</td>
+          <td>250 MB free disk space</td>
+          <td>1 GB free disk space</td>
+        </tr>
+        <tr>
+          <td>Operating System</td>
+          <td>Windows 10 / Ubuntu 20.04 / macOS</td>
+          <td>Windows 11 / Latest 64-bit OS</td>
+        </tr>
+        <tr>
+          <td>Java Development Kit</td>
+          <td>JDK 11</td>
+          <td>JDK 21 LTS</td>
+        </tr>
+        <tr>
+          <td>Web Browser</td>
+          <td>Chrome 90+ / Edge 90+ / Firefox</td>
+          <td>Latest Google Chrome or Microsoft Edge</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="section-heading">6. FUTURE SCOPE</h2>
+    <ul class="bullet-list">
+      <li><strong>AI-Powered Itinerary Recommendation:</strong> Implementing Machine Learning models to analyze past user preferences and suggest personalized travel paths based on seasonality.</li>
+      <li><strong>Database Persistence:</strong> Integrating relational database systems (PostgreSQL / MySQL) via JDBC/Hibernate for persistent booking records and customer profiles.</li>
+      <li><strong>Payment Gateway Integration:</strong> Connecting Razorpay / Stripe APIs to process booking token amounts and issue digital tickets.</li>
+      <li><strong>Live Weather &amp; Flight APIs:</strong> Fetching real-time mountain passes clearance, seasonal advisories, and live flight prices.</li>
+    </ul>
+
+    <h2 class="section-heading">7. REFERENCES</h2>
+    <ol class="ref-list">
+      <li>Oracle Corporation, <em>"Java Platform, Standard Edition Documentation - Class HttpServer"</em>, Oracle Java SE 21 Docs, 2024.</li>
+      <li>JEP 444, <em>"Virtual Threads - OpenJDK Project Loom"</em>, OpenJDK Documentation, 2023.</li>
+      <li>MDN Web Docs, <em>"Responsive Web Design Basics, Grid, and Flexbox"</em>, Mozilla Developer Network, 2025.</li>
+      <li>W3C, <em>"HTML5: A Vocabulary and Associated APIs for HTML and XHTML"</em>, World Wide Web Consortium.</li>
+      <li>Nielsen, J., <em>"Usability Engineering and Clean Information Architecture in Web Portals"</em>, Nielsen Norman Group.</li>
+      <li>Ministry of Tourism, Government of India, <em>"Incredible India Destination Guidelines and Curated Routes"</em>, 2025.</li>
+    </ol>
+  </div>
+
+</body>
+</html>
